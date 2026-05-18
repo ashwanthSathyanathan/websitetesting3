@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 130" preserveAspectRatio="xMidYMid meet">
+  <!-- Microsoft logo: 4 colored squares + "Microsoft" wordmark in white -->
+  <!-- 4-square mark -->
+  <rect x="0"   y="0"   width="58" height="58" fill="#F25022"/>
+  <rect x="64"  y="0"   width="58" height="58" fill="#7FBA00"/>
+  <rect x="0"   y="64"  width="58" height="58" fill="#00A4EF"/>
+  <rect x="64"  y="64"  width="58" height="58" fill="#FFB900"/>
+
+  <!-- "Microsoft" wordmark in white -->
+  <g fill="#FFFFFF">
+    <text x="142" y="89"
+          font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+          font-size="78"
+          font-weight="400"
+          letter-spacing="-1">Microsoft</text>
+  </g>
+</svg>

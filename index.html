@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantumSync</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='47' r='30' stroke='%23FF5C00' stroke-width='14' fill='none'/%3E%3Cline x1='50' y1='75' x2='50' y2='92' stroke='%23FF5C00' stroke-width='14' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Removed eager <link rel="preload"> for all team photos.
+       Forcing 7 photos to download up-front contributed to mobile Safari
+       running out of memory ("A problem repeatedly occurred").
+       They now load on demand via their background-image rules. -->
+</head>
+<body>
+  <div id="scroll-bar"></div>
+  <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+    <svg viewBox="0 0 24 24">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+  <!-- nav -->
+  <nav id="nav">
+    <a href="#" class="nb">
+      <span class="nbname" style="color:#FF5C00;display:inline-flex;align-items:center;gap:0;line-height:1;">
+        <svg width="16" height="21" viewBox="0 0 160 210" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;margin-right:-1px;margin-bottom:-1px;">
+          <circle cx="80" cy="85" r="66" stroke="#FF5C00" stroke-width="26" fill="none"/>
+          <line x1="80" y1="148" x2="80" y2="178" stroke="#FF5C00" stroke-width="26" stroke-linecap="round"/>
+        </svg><span style="color:#FF5C00;padding-left:3px;">uantumSync</span>
+      </span>
+    </a>
+    <ul class="nl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="ncta">Get in Touch</a>
+  </nav>
+  <!-- hero -->
+  <section id="hero">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="hi">
+      <div>
+        <h1 class="ht">Syncing Technology<br />With <em>Tomorrow</em></h1>
+        <p class="hs">QuantumSync delivers end-to-end cybersecurity, cloud, AI, and managed services to help businesses create secure, scalable, and future-ready digital ecosystems.</p>
+        <div class="ha">
+          <a href="#services" class="bto">Explore Services</a>
+          <a href="#contact" class="bout">Talk to Us →</a>
+        </div>
+      </div>
+      <div class="hv" id="hv">
+        <div class="globe-wrap">
+          <div class="qs-spin-scene">
+            <div class="qs-glow"></div>
+            <!-- extra subtle outer glow -->
+            <div
+              style="position:absolute;top:50%;left:50%;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(255,92,0,0.04) 0%,transparent 65%);animation:glowpulse 5s ease-in-out infinite reverse;pointer-events:none;">
+            </div>
+            <div class="qs-ring qs-ring-1"></div>
+            <div class="qs-ring qs-ring-2"></div>
+            <div class="qs-ring qs-ring-3"></div>
+            <!-- subtle 4th ring -->
+            <div
+              style="position:absolute;top:50%;left:50%;width:430px;height:430px;margin:-215px 0 0 -215px;border-radius:50%;border:1px dashed rgba(255,92,0,0.05);animation:ringrot2 38s linear infinite;pointer-events:none;">
+            </div>
+            <!-- floating micro dots -->
+            <div
+              style="position:absolute;top:50%;left:50%;width:6px;height:6px;border-radius:50%;background:rgba(255,92,0,0.5);margin:-3px 0 0 -3px;transform-origin:0 0;animation:orbitDot1 8s linear infinite;pointer-events:none;">
+            </div>
+            <div
+              style="position:absolute;top:50%;left:50%;width:4px;height:4px;border-radius:50%;background:rgba(255,92,0,0.35);margin:-2px 0 0 -2px;transform-origin:0 0;animation:orbitDot2 13s linear infinite;pointer-events:none;">
+            </div>
+            <div
+              style="position:absolute;top:50%;left:50%;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.25);margin:-1.5px 0 0 -1.5px;transform-origin:0 0;animation:orbitDot3 18s linear infinite reverse;pointer-events:none;">
+            </div>
+            <div class="qs-spin-stage">
+              <svg class="qs-logo-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="83" r="58" stroke="#FF5C00" stroke-width="15" fill="none" />
+                <line x1="100" y1="140" x2="100" y2="180" stroke="#FF5C00" stroke-width="15" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+          <!--
+          FLOATING SERVICE CARDS — uncomment to re-enable around the spinning Q
+          <div class="globe-card gc1">
+            <div class="gc-icon"><svg viewBox="0 0 24 24">
+                <path d="M12 2L3 6.5v5C3 16.5 7 21 12 22c5-1 9-5.5 9-10.5v-5L12 2z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg></div>
+            <div><div class="gc-txt">Cybersecurity</div><div class="gc-sub">End-to-end protection</div></div>
+          </div>
+          <div class="globe-card gc2">
+            <div class="gc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 10h-1.3A6 6 0 0 0 6 10.7a4 4 0 1 0 .7 7.3H18a4 4 0 0 0 0-8z" />
+              </svg></div>
+            <div><div class="gc-txt">Cloud Computing</div><div class="gc-sub">Public, private & hybrid</div></div>
+          </div>
+          <div class="globe-card gc3">
+            <div class="gc-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="5" r="1.5"/><circle cx="5" cy="12" r="1.5"/>
+                <circle cx="19" cy="12" r="1.5"/><circle cx="8" cy="19" r="1.5"/>
+                <circle cx="16" cy="19" r="1.5"/>
+                <line x1="12" y1="6.5" x2="6.2" y2="11"/><line x1="12" y1="6.5" x2="17.8" y2="11"/>
+                <line x1="6.5" y1="13" x2="8.5" y2="17.5"/><line x1="17.5" y1="13" x2="15.5" y2="17.5"/>
+              </svg></div>
+            <div><div class="gc-txt">Artificial Intelligence</div><div class="gc-sub">AI & automation</div></div>
+          </div>
+          <div class="globe-card gc4">
+            <div class="gc-icon"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="5" rx="2"/>
+                <rect x="2" y="10" width="20" height="5" rx="2"/>
+                <rect x="2" y="17" width="20" height="4" rx="2"/>
+              </svg></div>
+            <div><div class="gc-txt">Managed Services</div><div class="gc-sub">Proactive IT management</div></div>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about -->
+  <section id="about">
+    <div class="sw">
+      <p class="slbl rv">Who we are</p>
+      <h2 class="stit rv">Secure your <em>digital future</em> in the AI era</h2>
+      <div class="ag">
+        <div class="at rvl">
+          <p>Welcome to QuantumSync. We are driven by a clear purpose; to help businesses thrive in the ever-evolving
+            digital landscape. As a next generation IT services company, we specialize in Cybersecurity, Cloud
+            Computing, Artificial Intelligence, and Managed Services.</p>
+          <p>Our approach goes beyond delivering technology; we focus on solving real customer problems and enabling
+            organizations to unlock new opportunities for growth and innovation. By combining deep expertise with
+            agility, we design solutions that are secure, scalable, and future ready, ensuring our clients stay ahead of
+            emerging challenges.</p>
+          <p>At the heart of everything we do is a commitment to customer success. We work as trusted partners, building
+            resilient digital ecosystems that empower businesses to operate with confidence, harness the power of data,
+            and embrace intelligent transformations.</p>
+          <p>With QuantumSync by your side, you are not just preparing for the future; you are shaping it.</p>
+        </div>
+        <div class="as rvr">
+          <div class="sb"
+            onclick="document.getElementById('modal-cyber').classList.add('open');document.body.style.overflow='hidden'">
+            <div class="sb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                <path d="M12 2L3 6.5v5C3 16.5 7 21 12 22c5-1 9-5.5 9-10.5v-5L12 2z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg></div>
+            <div class="sbn">Cybersecurity</div>
+            <div class="sbl">Protecting your business, data, and reputation</div>
+          </div>
+          <div class="sb"
+            onclick="document.getElementById('modal-cloud').classList.add('open');document.body.style.overflow='hidden'">
+            <div class="sb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                <path d="M18 10h-1.3A6 6 0 0 0 6 10.7a4 4 0 1 0 .7 7.3H18a4 4 0 0 0 0-8z" />
+              </svg></div>
+            <div class="sbn">Cloud Computing</div>
+            <div class="sbl">Secure, scalable cloud environments</div>
+          </div>
+          <div class="sb"
+            onclick="document.getElementById('modal-ai').classList.add('open');document.body.style.overflow='hidden'">
+            <div class="sb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                <rect x="6" y="6" width="12" height="12" rx="1.5" />
+                <path d="M6 9H3M6 12H3M6 15H3M18 9h3M18 12h3M18 15h3M9 6V3M12 6V3M15 6V3M9 18v3M12 18v3M15 18v3" />
+                <path d="M9.5 12h.8l.8-2 .8 4 .8-2h.8" />
+              </svg></div>
+            <div class="sbn">Artificial Intelligence</div>
+            <div class="sbl">Intelligent automation and machine learning</div>
+          </div>
+          <div class="sb"
+            onclick="document.getElementById('modal-msp').classList.add('open');document.body.style.overflow='hidden'">
+            <div class="sb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                <rect x="2" y="4" width="20" height="6" rx="2" />
+                <rect x="2" y="14" width="20" height="6" rx="2" />
+                <path d="M6 7h.01M6 17h.01" />
+                <path d="M10 7h7M10 17h7" />
+                <path d="M10 5h3M10 15h3" />
+              </svg></div>
+            <div class="sbn">Managed Services</div>
+            <div class="sbl">Proactive IT operations and support</div>
+          </div>
+        </div>
+      </div>
+      <!-- team -->
+      <div class="team-section rv">
+        <p class="team-label">The people behind it</p>
+        <h3 class="team-heading">Meet the <em>team</em></h3>
+        <p class="team-sub">The experts driving QuantumSync's mission across cybersecurity, cloud, AI, and managed
+          services.</p>
+        <!-- board -->
+        <h4 class="team-subheading">Board Members</h4>
+        <div class="team-grid board-grid">
+          <div class="team-card" onclick="openTeamModal('b1')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/aparna.jpg');"
+              data-initials="AJ"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Aparna Jayachandran</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Board Member</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Translational biomedical scientist and academic leader bridging cancer research and digital innovation.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+          <div class="team-card" onclick="openTeamModal('b2')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/vijay.jpg');background-position:50% 18%;"
+              data-initials="VK"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Vijay Kumar</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Board Member</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Two decades of technology sales and digital transformation leadership across IBM, Optus, Xerox and Brother.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+          <div class="team-card" onclick="openTeamModal('b3')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/ashok.jpg');background-position:50% 15%;"
+              data-initials="AK"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Ashok Kavichandran</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Board Member</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">25+ years of global cybersecurity sales and strategic alliances across India, APAC and the Middle East.</div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+        </div>
+        <!-- members -->
+        <h4 class="team-subheading">Team Members</h4>
+        <div class="team-grid">
+          <div class="team-card" onclick="openTeamModal('t1')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/vijay.jpg');background-position:50% 18%;"
+              data-initials="VK"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Vijay Kumar</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Founder &amp; CEO</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Drives QuantumSync&rsquo;s vision and growth, combining strategy with deep technology expertise.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+          <div class="team-card" onclick="openTeamModal('t2')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/ashwathi.jpg');background-size:130%;background-position:50% 22%;"
+              data-initials="AS"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Ashwathi Sathyanathan</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Technical Associate</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Works on cloud, automation, and system support to deliver reliable, scalable technical solutions.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+          <div class="team-card" onclick="openTeamModal('t3')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/Diona.jpg');background-size:200%;background-position:60% 30%;"
+              data-initials="DD"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Dionna Dominic</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Technical Associate</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Brings energy and a sharp eye to delivery across QuantumSync engagements.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+          <div class="team-card" onclick="openTeamModal('t4')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/Danish.png');background-position:50% 18%;"
+              data-initials="DZ"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Daanish Zaman</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Cloud &amp; Cybersecurity Consultant</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Specialist in cloud architecture and cybersecurity strategy.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+          <div class="team-card" onclick="openTeamModal('t5')">
+            <div class="tc-avatar has-photo"
+              style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--o);background-image:url('images/team/ashwanth.jpg');background-size:130%;background-position:50% 22%;"
+              data-initials="AS"></div>
+            <div class="tc-name-ph"
+              style="background:none;height:auto;width:auto;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);">
+              Ashwanth Sathyanathan</div>
+            <div class="tc-role-ph"
+              style="background:none;height:auto;width:auto;font-size:.78rem;color:var(--o);font-weight:600;margin-bottom:.8rem;">
+              Technical Associate</div>
+            <div class="tc-bio-ph" style="display:block;background:none;">
+              <p style="font-size:.8rem;color:var(--mu);line-height:1.5;">Designs clean, user-focused interfaces that improve usability and conversion.</p>
+            </div>
+            <span class="tc-view">View profile <svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- values -->
+  <section id="values">
+    <div class="vmv-grid rv">
+      <div class="vmv-block">
+        <div class="vmv-label">Vision</div>
+        <p class="vmv-text">Empowering businesses with secure, intelligent, sustainable, and scalable technology
+          solutions while delivering world class customer experience.</p>
+      </div>
+      <div class="vmv-block">
+        <div class="vmv-label">Mission</div>
+        <p class="vmv-text">Delivering next-generation IT services that combine innovation, agility, and security to
+          accelerate customer value and success.</p>
+      </div>
+    </div>
+    <div class="cv-heading rv">Core Values</div>
+    <div class="cv-grid rv">
+      <!-- 1 — Customer Centricity (wide hero card) -->
+      <div class="cv-card">
+        <span class="cv-num">01</span>
+        <div class="cv-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </div>
+        <div class="cv-card-title">Customer Centricity</div>
+        <p class="cv-card-body">Placing clients at the heart of every decision, ensuring solutions are tailored to their
+          goals and deliver measurable outcomes.</p>
+      </div>
+      <!-- 2 — Innovation & Agility -->
+      <div class="cv-card">
+        <span class="cv-num">02</span>
+        <div class="cv-icon">
+          <svg viewBox="0 0 24 24">
+            <line x1="9" y1="18" x2="15" y2="18" />
+            <line x1="10" y1="22" x2="14" y2="22" />
+            <path
+              d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14z" />
+          </svg>
+        </div>
+        <div class="cv-card-title">Innovation &amp; Agility</div>
+        <p class="cv-card-body">Embracing cutting-edge technologies and adapting quickly to evolving market demands to
+          keep customers ahead of the curve.</p>
+      </div>
+      <!-- 3 — Integrity & Trust -->
+      <div class="cv-card" style="justify-content:flex-start;">
+        <span class="cv-num">03</span>
+        <div class="cv-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <polyline points="9 12 11 14 15 10" />
+          </svg>
+        </div>
+        <div class="cv-card-title" style="margin-bottom:.6rem;">Integrity &amp; Trust</div>
+        <p class="cv-card-body">Upholding the highest standards of ethics, transparency, and accountability in every
+          engagement.</p>
+      </div>
+      <!-- 4 — Collaboration & Partnership (wide) -->
+      <div class="cv-card">
+        <span class="cv-num">04</span>
+        <div class="cv-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+          </svg>
+        </div>
+        <div class="cv-card-title">Collaboration &amp; Partnership</div>
+        <p class="cv-card-body">Building long-term, mutually beneficial relationships with customers, partners, and
+          teams to co-create success.</p>
+      </div>
+      <!-- 5 — Security & Resilience (wide) -->
+      <div class="cv-card">
+        <span class="cv-num">05</span>
+        <div class="cv-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </div>
+        <div class="cv-card-title">Security &amp; Resilience</div>
+        <p class="cv-card-body">Embedding robust security and business continuity into every solution to safeguard
+          clients' digital assets and ensure sustainable growth.</p>
+      </div>
+    </div>
+  </section>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-b1">
+    <div class="tm-overlay" onclick="closeTeamModal('b1')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/aparna.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Board Member</span>
+          <div class="tm-name">Aparna Jayachandran</div>
+          <div class="tm-location">📍 Australia</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('b1')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+        <p class="tm-bio">Aparna Jayachandran is an internationally recognized translational biomedical scientist and academic leader with over two decades of experience spanning cancer biology, molecular medicine and scientific innovation. Currently heading a Breast Cancer Research Program and an Adjunct Associate Professor at Federation University, her career across Australia, Germany, USA, and India places her at the forefront of global cancer research. Aparna brings to the QuantumSync board exceptional scientific intellect, a data-driven systems-thinking approach, and a unique perspective on how technology and innovation can accelerate transformative outcomes.</p>
+        <div class="tm-section-title">Expertise</div>
+        <div class="tm-expertise">
+          <span class="tm-exp-tag">Translational Research</span>
+          <span class="tm-exp-tag">Cancer Biology</span>
+          <span class="tm-exp-tag">Systems Thinking</span>
+          <span class="tm-exp-tag">Innovation Strategy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-b2">
+    <div class="tm-overlay" onclick="closeTeamModal('b2')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/vijay.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Board Member</span>
+          <div class="tm-name">Vijay Kumar</div>
+          <div class="tm-location">📍 Ballarat, AU</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('b2')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+  <p class="tm-bio">Vijay Kumar is a seasoned technology and digital transformation leader with nearly three decades of experience across global organizations including IBM, Optus, Xerox, and Brother International in India and Australia. He brings extensive expertise across cybersecurity, cloud computing, AI-driven automation, managed services, and strategic outsourcing, with a strong track record of helping organizations navigate digital transformation and business growth.</p>
+  <p class="tm-bio">As a Board Member at QuantumSync, Vijay provides strategic guidance focused on innovation, customer-centric technology solutions, and long-term business growth. He is passionate about helping organizations embrace emerging technologies while building resilient and future-ready operations.</p>
+  <p class="tm-bio">Outside of work, Vijay is a fitness enthusiast, enjoys playing competitive cricket for his local club, and values spending time outdoors with his daughter and travelling with family to explore new cultures.</p>
+  <div class="tm-section-title">Expertise</div>
+  <div class="tm-expertise">
+    <span class="tm-exp-tag">Digital Transformation</span>
+    <span class="tm-exp-tag">Cybersecurity</span>
+    <span class="tm-exp-tag">Cloud Computing</span>
+    <span class="tm-exp-tag">Managed Services</span>
+    <span class="tm-exp-tag">Strategic Outsourcing</span>
+  </div>
+</div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-b3">
+    <div class="tm-overlay" onclick="closeTeamModal('b3')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/ashok.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Board Member</span>
+          <div class="tm-name">Ashok Kavichandran</div>
+          <div class="tm-location">📍 India / APAC</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('b3')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+        <p class="tm-bio">Ashok Kavichandran is a Global Technology sales and cybersecurity leader with almost 3 decades of experience across India, Asia-Pacific, North Americas and the Middle East. He has held senior leadership roles at Wipro, IBM, Check Point Software Technologies, FireCompass and SISA, building a distinguished career driving revenue growth and strategic alliances across International markets. Ashok brings deep cybersecurity expertise, global industry networks, and executive-level commercial leadership to the QuantumSync board.</p>
+        <div class="tm-section-title">Expertise</div>
+        <div class="tm-expertise">
+          <span class="tm-exp-tag">Cybersecurity</span>
+          <span class="tm-exp-tag">Strategic Alliances</span>
+          <span class="tm-exp-tag">Revenue Growth</span>
+          <span class="tm-exp-tag">Global Markets</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-t1">
+    <div class="tm-overlay" onclick="closeTeamModal('t1')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/vijay.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Founder &amp; CEO</span>
+          <div class="tm-name">Vijay Kumar</div>
+          <div class="tm-location">📍 Ballarat, AU</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('t1')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+  <p class="tm-bio">Vijay Kumar is a highly accomplished technology and digital transformation leader with nearly three decades of experience across global organizations including IBM, Optus, Xerox, and Brother International in both India and Australia. Throughout his career, he has helped enterprises, government, and mid-market organizations navigate complex technology challenges and accelerate digital transformation initiatives.</p>
+  <p class="tm-bio">With deep expertise across cybersecurity, cloud computing, AI and automation, managed IT services, strategic outsourcing, and modern digital workplace solutions, Vijay is known for building trusted customer relationships and delivering practical, business-aligned outcomes. His consultative approach, combined with strong regional market insight and a passion for innovation, enables organizations to confidently adopt emerging technologies while strengthening operational resilience and long-term growth.</p>
+  <p class="tm-bio">As Founder of QuantumSync, Vijay is committed to helping businesses and community organizations harness the power of next-generation technologies to improve efficiency, enhance security, and prepare for the future digital economy.</p>
+  <p class="tm-bio">Beyond technology and business leadership, Vijay is a passionate fitness enthusiast and an avid cricketer who enjoys playing competitive cricket for his local club. He values balance, teamwork, and discipline both on and off the field. Outside of work, Vijay loves spending quality time outdoors with his daughter and embraces every opportunity to travel with his family, experience new cultures, and build meaningful connections across communities and people.</p>
+  <div class="tm-section-title">Expertise</div>
+  <div class="tm-expertise">
+    <span class="tm-exp-tag">Strategy</span>
+    <span class="tm-exp-tag">Operations</span>
+    <span class="tm-exp-tag">Management</span>
+    <span class="tm-exp-tag">Growth</span>
+  </div>
+</div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-t2">
+    <div class="tm-overlay" onclick="closeTeamModal('t2')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/ashwathi.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Technical Associate</span>
+          <div class="tm-name">Ashwathi Sathyanathan</div>
+          <div class="tm-location">📍 Geelong, AU</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('t2')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+        <p class="tm-bio">Ashwathi is a Technical Associate at QuantumSync, focused on cloud technologies and networking. She is an AWS Certified Cloud Practitioner working toward her Solutions Architect Associate certification, with hands-on experience using EC2, Lambda, IAM, and S3. Before moving into tech, she worked in education, healthcare administration, and customer experience while completing her Master's as an international student, roles that shaped her communication and adaptability. Based in Geelong, Ashwathi spends her time outside work watching anime, journaling, or listening to music.</p>
+        <div class="tm-section-title">Expertise</div>
+        <div class="tm-expertise">
+          <span class="tm-exp-tag">Cloud</span>
+          <span class="tm-exp-tag">Systems</span>
+          <span class="tm-exp-tag">Automation</span>
+          <span class="tm-exp-tag">Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-t3">
+    <div class="tm-overlay" onclick="closeTeamModal('t3')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/Diona.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Technical Associate</span>
+          <div class="tm-name">Diona Dominic</div>
+          <div class="tm-location">📍 Australia</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('t3')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+        <p class="tm-bio">Diona Dominic is an Information Technology graduate from Deakin University, specializing in Cloud Computing and Networking. With a strong focus on cloud computing, cybersecurity, CRM platforms, and data analytics, she brings technical knowledge, a problem-solving mindset, and a passion for continuous learning to the QuantumSync team. Helping clients harness innovative technologies to drive efficiency, growth, and smarter decision-making
+.</p>
+        <div class="tm-section-title">Expertise</div>
+        <div class="tm-expertise">
+          <span class="tm-exp-tag">Coordination</span>
+          <span class="tm-exp-tag">Delivery</span>
+          <span class="tm-exp-tag">Communication</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-t4">
+    <div class="tm-overlay" onclick="closeTeamModal('t4')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/Danish.png');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Cloud &amp; Cybersecurity Consultant</span>
+          <div class="tm-name">Daanish Zaman</div>
+          <div class="tm-location">📍 Melbourne, AU</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('t4')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+        <p class="tm-bio">Daanish works across cloud and cybersecurity initiatives at QuantumSync, with a strong interest in building secure, scalable, and intelligent systems for modern environments. He is particularly interested in the intersection of AI, cloud infrastructure, and cybersecurity, and how emerging technologies are reshaping the way organizations operate and protect digital systems. With a naturally analytical approach and a curiosity for understanding how things work beneath the surface, he enjoys exploring system design, security practices, and modern cloud technologies. Outside of work, Daanish enjoys staying active through training and outdoor activities, and is driven by continuous learning, problem-solving, and emerging technology.</p>
+        <div class="tm-section-title">Expertise</div>
+        <div class="tm-expertise">
+          <span class="tm-exp-tag">Cloud Architecture</span>
+          <span class="tm-exp-tag">Cybersecurity Strategy</span>
+          <span class="tm-exp-tag">Risk &amp; Compliance</span>
+          <span class="tm-exp-tag">Cloud Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="tm-bg" id="tm-t5">
+    <div class="tm-overlay" onclick="closeTeamModal('t5')"></div>
+    <div class="tm-modal">
+      <div class="tm-header">
+        <div class="tm-avatar-lg has-photo"
+          style="display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--o);background-image:url('images/team/ashwanth.jpg');">
+          </div>
+        <div class="tm-info">
+          <span class="tm-role-badge">Technical Associate</span>
+          <div class="tm-name">Ashwanth Sathyanathan</div>
+          <div class="tm-location">📍 Geelong, AU</div>
+        </div>
+        <button class="tm-close" onclick="closeTeamModal('t5')"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="tm-body">
+        <p class="tm-bio">Ashwanth is a Technical Associate at QuantumSync, working across cloud and design to support the company's digital presence. On the cloud side, he focuses on modern infrastructure, automation, and scalable deployments, while on the design side he builds clean, intuitive web interfaces that make complex services feel simple and engaging. He brings a sharp eye for detail and a curiosity for emerging technology to the team.</p>
+        <div class="tm-section-title">Expertise</div>
+        <div class="tm-expertise">
+          <span class="tm-exp-tag">Design</span>
+          <span class="tm-exp-tag">User Experience</span>
+          <span class="tm-exp-tag">Web Interfaces</span>
+          <span class="tm-exp-tag">Prototyping</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="sw">
+      <p class="slbl rv">What we do</p>
+      <h2 class="stit rv">Your complete <em>digital infrastructure partner</em></h2>
+      <p style="color:#ffffff;margin-top:.8rem;font-size:.88rem" class="rv">Click any service to explore in detail →
+      </p>
+      <div class="sg">
+        <div class="sc rv" data-svc="cyber" data-tilt>
+          <span class="sc-click-hint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+              <path d="M15 3h6v6M10 14L21 3M21 13v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7" />
+            </svg>View details</span>
+          <div class="sic"><svg viewBox="0 0 24 24">
+              <path d="M12 2L3 6.5v5C3 16.5 7 21 12 22c5-1 9-5.5 9-10.5v-5L12 2z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg></div>
+          <p class="sc-n">01 / Cybersecurity</p>
+          <h3 class="sc-name">Cybersecurity</h3>
+          <p class="sc-desc">Robust, end-to-end security services that safeguard your business, data, and reputation
+            against today's most sophisticated threats.</p>
+          <div class="sc-tags"><span class="tag">Compliance</span><span class="tag">Security Testing</span><span
+              class="tag">Cyber Resilience</span><span class="tag">IAM</span><span class="tag">Data Protection</span>
+          </div>
+          <span class="sc-cta">Learn more <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></span>
+        </div>
+        <div class="sc rv" style="transition-delay:.1s" data-svc="cloud" data-tilt>
+          <span class="sc-click-hint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+              <path d="M15 3h6v6M10 14L21 3M21 13v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7" />
+            </svg>View details</span>
+          <div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10h-1.3A6 6 0 0 0 6 10.7a4 4 0 1 0 .7 7.3H18a4 4 0 0 0 0-8z" />
+            </svg></div>
+          <p class="sc-n">02 / Cloud Computing</p>
+          <h3 class="sc-name">Cloud Computing</h3>
+          <p class="sc-desc">Unlock agility, scalability, and innovation through secure cloud adoption, whether public,
+            private, or hybrid environments designed for your business.</p>
+          <div class="sc-tags"><span class="tag">Cloud Strategy</span><span class="tag">Migration</span><span
+              class="tag">Infrastructure</span><span class="tag">Automation</span></div>
+          <span class="sc-cta">Learn more <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></span>
+        </div>
+        <div class="sc rv" style="transition-delay:.2s" data-svc="ai" data-tilt>
+          <span class="sc-click-hint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+              <path d="M15 3h6v6M10 14L21 3M21 13v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7" />
+            </svg>View details</span>
+          <div class="sic"><svg viewBox="0 0 24 24">
+              <rect x="6" y="6" width="12" height="12" rx="1.5" />
+              <path d="M6 9H3M6 12H3M6 15H3M18 9h3M18 12h3M18 15h3M9 6V3M12 6V3M15 6V3M9 18v3M12 18v3M15 18v3" />
+              <path d="M9.5 12h.8l.8-2 .8 4 .8-2h.8" />
+            </svg></div>
+          <p class="sc-n">03 / Artificial Intelligence</p>
+          <h3 class="sc-name">Artificial Intelligence</h3>
+          <p class="sc-desc">Harness AI and automation to work smarter, with intelligent process automation, predictive
+            analytics, and ML that transform complexity into advantage.</p>
+          <div class="sc-tags"><span class="tag">Process Automation</span><span class="tag">Predictive
+              Analytics</span><span class="tag">Machine Learning</span><span class="tag">AI Strategy</span></div>
+          <span class="sc-cta">Learn more <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></span>
+        </div>
+        <div class="sc rv" style="transition-delay:.3s" data-svc="msp" data-tilt>
+          <span class="sc-click-hint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+              <path d="M15 3h6v6M10 14L21 3M21 13v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7" />
+            </svg>View details</span>
+          <div class="sic"><svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="6" rx="2" />
+              <rect x="2" y="14" width="20" height="6" rx="2" />
+              <path d="M6 7h.01M6 17h.01" />
+              <path d="M10 7h7M10 17h7" />
+              <path d="M10 5h3M10 15h3" />
+            </svg></div>
+          <p class="sc-n">04 / Managed Services</p>
+          <h3 class="sc-name">Managed Services</h3>
+          <p class="sc-desc">Simplify IT operations and deliver continuous value. Our proactive approach keeps
+            technology running smoothly so your team focuses on growth.</p>
+          <div class="sc-tags"><span class="tag">IT Infrastructure</span><span class="tag">End User Support</span><span
+              class="tag">SOC</span><span class="tag">Disaster Recovery</span></div>
+          <span class="sc-cta">Learn more <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- cyber modal -->
+  <div class="modal-bg" id="modal-cyber">
+    <div class="modal-overlay" onclick="closeModal('cyber')"></div>
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-icon-w"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <path d="M12 2L3 6.5v5C3 16.5 7 21 12 22c5-1 9-5.5 9-10.5v-5L12 2z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg></div>
+        <div class="modal-title-wrap">
+          <p class="modal-eyebrow">Service 01</p>
+          <h2 class="modal-title">Cybersecurity</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('cyber')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">At QuantumSync we believe Cybersecurity is not optional, it is essential. In today's
+          digital world, cyber threats are more sophisticated, and more dangerous than ever before. At QuantumSync, we
+          provide robust, end-to-end cybersecurity services that safeguard your business, data, and reputation. Whether
+          you are facing growing compliance demands, expanding your remote workforce, or simply want to strengthen your
+          digital defences, our team is here to help.</p>
+        <div class="svc-cats">
+          <div class="svc-cat">
+            <div class="svc-cat-title">Compliance</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Payment Data Security</li>
+              <li>PCI DSS, PCI PIN, PCI 3DS, PCI P2PE, PCI S3, PCI S-SLC, PCI CP</li>
+              <li>SWIFT, Central Bank Compliance</li>
+              <li class="highlight">Strategy &amp; Risk</li>
+              <li>NIST, HIPAA, GDPR, HITRUST, SOC 1, SOC 2, CCPA, ISO, Cloud Security</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Security Testing</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Application Security</li>
+              <li>Application Pen Test, API Security Test, Secure Code Review</li>
+              <li class="highlight">Network Security</li>
+              <li>Vulnerability Assessment &amp; Penetration Testing, PCI ASV Scan, Firewall Rule Review, Configuration
+                Review</li>
+              <li class="highlight">Phishing Simulation</li>
+              <li class="highlight">Red Teaming Exercise</li>
+              <li>Layer Security Testing</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cyber Resilience</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Managed Extended Detection &amp; Response</li>
+              <li>24/7 Monitoring, UEBA, Threat Intel, Advanced Threat Hunting, Breach &amp; Attack Simulation, Use Case
+                Factory, SOAR</li>
+              <li class="highlight">Digital Forensics &amp; Incident Response</li>
+              <li>Incident Response, Compromise Assessment Services, Forensic Readiness Audit, Forensic &amp; Incident
+                Response Retainer Service</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Training &amp; Certifications</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Payment Data Security Training &amp; ANSI Accredited Certification</li>
+              <li>CPISI, CPISI Advanced, CPISI-D, CPISI Hybrid</li>
+              <li class="highlight">Certification Program in Cybersecurity for AI – CSPAI</li>
+              <li>CSPAI, CSPAI – Developers</li>
+              <li class="highlight">Forensic Briefing Sessions for Senior Management</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Leading Tech Security</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">AI PRISM</li>
+              <li>AI PRISM LLM Vulnerability Scanner Solution, At Risk Management &amp; Governance Solution Framework,
+                AI Compliance &amp; Governance Consulting Service</li>
+              <li class="highlight">Hardware &amp; IOT Security Testing</li>
+              <li class="highlight">Quantum Security</li>
+              <li>Quantum Cryptography Consulting</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Data Protection &amp; Governance</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Data Discovery &amp; Classification</li>
+              <li>PCI/PII/PHI Data Discovery, Data Classification in Endpoint, Data Classification in O365, Metadata,
+                Dynamic Masking, Redact, Truncation, Integration to DRM, DLP, SIEM</li>
+            </ul>
+          </div>
+        </div>
+        <button class="modal-cta"
+          onclick="closeModal('cyber');document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get in
+          Touch →</button>
+      </div>
+    </div>
+  </div>
+  <!-- cloud modal -->
+  <div class="modal-bg" id="modal-cloud">
+    <div class="modal-overlay" onclick="closeModal('cloud')"></div>
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-icon-w"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <path d="M18 10h-1.3A6 6 0 0 0 6 10.7a4 4 0 1 0 .7 7.3H18a4 4 0 0 0 0-8z" />
+          </svg></div>
+        <div class="modal-title-wrap">
+          <p class="modal-eyebrow">Service 02</p>
+          <div style="display:flex;align-items:center;gap:1.1rem;">
+            <h2 class="modal-title" style="margin:0;">Cloud Computing</h2>
+            <img src="images/aws.svg" alt="AWS"
+              style="height:38px;width:auto;opacity:.85;flex-shrink:0;" />
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal('cloud')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">QuantumSync's Cloud Computing services enable businesses to unlock agility, scalability,
+          and innovation through secure and efficient cloud adoption. We advise, design, migrate, modernize, and manage
+          tailored cloud environments, whether public, private, or hybrid to meet your operational and strategic goals.
+        </p>
+        <div class="svc-cats">
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Strategy &amp; Consulting</div>
+            <ul class="svc-cat-items">
+              <li>Cloud Readiness Assessment</li>
+              <li>Business Case, ROI &amp; TCO Analysis</li>
+              <li>Cloud Architecture Design</li>
+              <li>Cloud Governance &amp; Compliance Consulting</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Migration Services</div>
+            <ul class="svc-cat-items">
+              <li>Application &amp; Workload Migration</li>
+              <li>Data Migration &amp; Integration</li>
+              <li>Hybrid &amp; Multi Cloud Migration</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Modernization</div>
+            <ul class="svc-cat-items">
+              <li>Application Modernization</li>
+              <li>IT Infrastructure Modernization</li>
+              <li>Enterprise AI Modernization</li>
+              <li>Hybrid Infrastructure Modernization</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Security &amp; Compliance</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Cloud Security &amp; Assessments</li>
+              <li class="highlight">Identity &amp; Access Management</li>
+              <li class="highlight">Data Encryption &amp; Key Management</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Management Services</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Cloud Operations &amp; Managed Services</li>
+              <li class="highlight">Cloud Security &amp; Governance Management</li>
+              <li class="highlight">Cost Management &amp; FinOps</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Automation &amp; Optimization</div>
+            <ul class="svc-cat-items">
+              <li>Infrastructure &amp; Platform Automation</li>
+              <li>Cost Optimization &amp; FinOps Automation</li>
+              <li>Performance, Reliability &amp; Resilience Optimization</li>
+            </ul>
+          </div>
+        </div>
+        <button class="modal-cta"
+          onclick="closeModal('cloud');document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get in
+          Touch →</button>
+      </div>
+    </div>
+  </div>
+  <!-- ai modal -->
+  <div class="modal-bg" id="modal-ai">
+    <div class="modal-overlay" onclick="closeModal('ai')"></div>
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-icon-w"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <rect x="6" y="6" width="12" height="12" rx="1.5" />
+            <path d="M6 9H3M6 12H3M6 15H3M18 9h3M18 12h3M18 15h3M9 6V3M12 6V3M15 6V3M9 18v3M12 18v3M15 18v3" />
+            <path d="M9.5 12h.8l.8-2 .8 4 .8-2h.8" />
+          </svg></div>
+        <div class="modal-title-wrap">
+          <p class="modal-eyebrow">Service 03</p>
+          <h2 class="modal-title">Artificial Intelligence</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('ai')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">At QuantumSync, we harness the power of Artificial Intelligence and Automation to help
+          businesses work smarter, faster, and more efficiently. Our solutions integrate intelligent process automation,
+          predictive analytics, and machine learning to optimize workflows, enhance decision making, and drive
+          innovation across operations.</p>
+        <p class="modal-desc" style="margin-top:-.5rem">From automating routine tasks to building AI-driven insights
+          that unlock new opportunities, QuantumSync empowers organizations to transform complexity into clarity,
+          enabling teams to focus on strategy, and growth in the new digital economy.</p>
+        <div class="ai-video">
+          <video width="100%" height="100%" controls preload="none" playsinline style="border-radius:12px">
+            <source src="videos/procesync-product-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <button class="modal-cta"
+          onclick="closeModal('ai');document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get in Touch
+          →</button>
+      </div>
+    </div>
+  </div>
+  <!-- msp modal -->
+  <div class="modal-bg" id="modal-msp">
+    <div class="modal-overlay" onclick="closeModal('msp')"></div>
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-icon-w"><svg viewBox="0 0 24 24" fill="none" stroke="var(--o)" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <rect x="2" y="4" width="20" height="6" rx="2" />
+            <rect x="2" y="14" width="20" height="6" rx="2" />
+            <path d="M6 7h.01M6 17h.01" />
+            <path d="M10 7h7M10 17h7" />
+            <path d="M10 5h3M10 15h3" />
+          </svg></div>
+        <div class="modal-title-wrap">
+          <p class="modal-eyebrow">Service 04</p>
+          <h2 class="modal-title">Managed Services</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('msp')"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">At QuantumSync, our Managed Services are designed to simplify IT operations, enhance
+          security, and deliver continuous business value. Our proactive approach ensures your technology runs smoothly,
+          so you can focus on growth, not downtime.</p>
+        <div class="svc-cats">
+          <div class="svc-cat">
+            <div class="svc-cat-title">Digital Workplace</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Microsoft 365 Support</li>
+              <li>Teams, SharePoint, Outlook</li>
+              <li class="highlight">Identity, Access &amp; Remote Work</li>
+              <li>SSO, MFA, Conditional Access, Virtual Desktop Infrastructure, DaaS</li>
+              <li class="highlight">Experience, Adoption &amp; Service Enablement</li>
+              <li>Digital Employee Experience, IT Service Desk &amp; ITSM Integration</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">End Point Support</div>
+            <ul class="svc-cat-items">
+              <li>Desktop, Laptop, Thin Client &amp; Mobile device</li>
+              <li>Device Provisioning, Imaging, Lifecycle Management, Patching, OS Update</li>
+              <li class="highlight">Hardware &amp; Software Troubleshooting</li>
+              <li>Endpoint Security Management, Remote &amp; Onsite Support (L1–L3)</li>
+              <li class="highlight">Asset Management &amp; Inventory</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Server Support</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Server Operations &amp; Maintenance</li>
+              <li class="highlight">Incident Management &amp; Break-Fix</li>
+              <li class="highlight">Security Compliance &amp; Risk Management</li>
+              <li class="highlight">Change Management &amp; Optimization</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Business Continuity &amp; Disaster Recovery</div>
+            <ul class="svc-cat-items">
+              <li>Strategy, Assessment &amp; Planning</li>
+              <li>Backup, Recovery &amp; Resilience Implementation</li>
+              <li>Testing Readiness &amp; Incident Response</li>
+              <li>Governance &amp; Compliance</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Network Support</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Network Operations &amp; Monitoring</li>
+              <li class="highlight">Incident, Problem &amp; Break-Fix Support</li>
+              <li class="highlight">Security, Compliance &amp; Risk Management</li>
+              <li class="highlight">Change Management</li>
+            </ul>
+          </div>
+          <div class="svc-cat">
+            <div class="svc-cat-title">Cloud Managed Services</div>
+            <ul class="svc-cat-items">
+              <li class="highlight">Cloud Operations &amp; Managed Services</li>
+              <li>Cloud Security &amp; Governance Management</li>
+              <li>Cost Management &amp; FinOps</li>
+            </ul>
+          </div>
+        </div>
+        <button class="modal-cta"
+          onclick="closeModal('msp');document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get in
+          Touch →</button>
+      </div>
+    </div>
+  </div>
+  <!-- industries -->
+  <section id="industries">
+    <div class="sw">
+      <div class="ind-intro">
+        <div>
+          <p class="slbl rv">Industries</p>
+          <h2 class="stit rv">Verticals we <em>serve</em></h2>
+        </div>
+        <p class="ind-sub rv">We bring deep sector knowledge and technology expertise together, delivering solutions
+          calibrated for the specific compliance, operational, and strategic demands of each industry.</p>
+      </div>
+      <h3 class="verticals-title rv">VERTICALS WE SERVE</h3>
+      <div class="rv">
+        <!-- public -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <path d="M3 22V9l9-7 9 7v13" />
+                  <path d="M9 22V16h6v6" />
+                  <line x1="3" y1="9" x2="21" y2="9" />
+                </svg></span>PUBLIC SECTOR</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync partners with public sector organizations to modernize, secure, and future proof their
+                digital environments while maintaining the highest standards of trust, compliance, and service delivery.
+              </p>
+              <p>We help government departments, councils, and statutory bodies strengthen their cyber security posture
+                through risk-based assessments, compliance-aligned controls, and proactive threat management, ensuring
+                sensitive citizen data is protected.</p>
+              <p>Our AWS cloud computing services enable secure, scalable, and cost effective platforms that support
+                digital government initiatives, resilience, and service continuity.</p>
+              <p>By leveraging AI and automation, QuantumSync helps public sector organizations streamline operations,
+                improve decision making, reduce operational costs, and enhance citizen experiences.</p>
+            </div>
+            <div class="acc-img"><img src="images/public-sector.jpg" loading="lazy" decoding="async"
+                alt="Public Sector" /></div>
+          </div>
+        </div>
+        <!-- health -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg></span>HEALTHCARE</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync supports healthcare organizations as they navigate rapid digital transformation while
+                safeguarding patient trust and clinical integrity. As healthcare providers increasingly adopt electronic
+                health records, telehealth platforms, cloud-based clinical systems, and data-driven care models, we help
+                secure these environments through robust cybersecurity frameworks, including NIST, ASD Essential Eight,
+                MITRE ATT&amp;CK, and HIPAA.</p>
+              <p>Our AWS cloud computing services enable scalable, resilient infrastructure that supports
+                interoperability, data sharing, and continuity of care across systems and providers.</p>
+              <p>By applying AI and automation, QuantumSync helps healthcare providers reduce administrative burden,
+                improve operational efficiency, enhance clinical workflows, and unlock actionable insights from health
+                data, thereby empowering better patient outcomes while maintaining security, compliance, and reliability
+                in an increasingly digital healthcare ecosystem.</p>
+            </div>
+            <div class="acc-img"><img src="images/healthcare.jpg" loading="lazy" decoding="async"
+                alt="Healthcare" /></div>
+          </div>
+        </div>
+        <!-- finance -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <line x1="12" y1="1" x2="12" y2="23" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg></span>FINANCIAL SERVICES</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync partners with financial services organizations to securely enable digital transformation in
+                an industry defined by trust, regulation, and rapidly evolving customer expectations.</p>
+              <p>As banks, fintechs, insurance companies, and payment providers accelerate the adoption of cloud-native
+                platforms, open banking, real-time payments, and data-driven services, we help strengthen cybersecurity
+                through risk-led security architectures, continuous audit and alignment with regulatory and industry
+                standards.</p>
+              <p>Our AWS cloud computing services secure scalability, resilience, and innovation while meeting stringent
+                compliance and data sovereignty requirements.</p>
+              <p>By leveraging AI and automation, QuantumSync helps financial institutions enhance fraud detection,
+                streamline operations, optimize costs, and deliver more personalized customer experience.</p>
+            </div>
+            <div class="acc-img"><img src="images/financial-services.jpg" loading="lazy" decoding="async"
+                alt="Financial Services" /></div>
+          </div>
+        </div>
+        <!-- manufacturing -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <path d="M2 20h20" />
+                  <path d="M6 20V10l6-8 6 8v10" />
+                  <path d="M10 20v-5h4v5" />
+                </svg></span>MANUFACTURING</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync supports manufacturing organizations as they modernize operations and embrace Industry 4.0
+                through secure, scalable, and intelligent digital platforms.</p>
+              <p>As manufacturers adopt smart factories, connected supply chains, IoT-enabled equipment, and cloud-based
+                ERP and production systems, we help protect both IT and OT environments with robust cybersecurity
+                strategies that reduce risk and ensure operational continuity.</p>
+              <p>Our cloud computing services enable greater agility, data visibility, and integration across
+                production, logistics, and partners. By applying AI and automation, QuantumSync helps manufacturers
+                optimize production planning, predict equipment failures, reduce downtime, improve quality control, and
+                drive cost efficiencies, empowering safer, more resilient, and more competitive manufacturing operations.
+              </p>
+            </div>
+            <div class="acc-img"><img src="images/manufacturing.jpg" loading="lazy" decoding="async"
+                alt="Manufacturing" /></div>
+          </div>
+        </div>
+        <!-- retail -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 01-8 0" />
+                </svg></span>RETAIL</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync partners with retail organizations to securely accelerate digital transformation in a
+                sector driven by customer experience, speed, and data. As retailers adopt omnichannel commerce,
+                cloud-based POS systems, e-commerce platforms, and data-driven personalization, we help strengthen
+                cybersecurity to protect customer data, payment systems, and digital storefronts from evolving threats.
+              </p>
+              <p>Our AWS cloud computing services enable scalable, resilient platforms that support seasonal demand,
+                rapid innovation, and seamless integration across online and in-store experiences.</p>
+              <p>By leveraging AI and automation, QuantumSync helps retailers optimize inventory management, personalize
+                customer engagement, streamline operations, reduce costs, and gain real-time insights, delivering
+                smarter, safer, and more connected retail experiences.</p>
+            </div>
+            <div class="acc-img"><img src="images/retail.jpg" loading="lazy" decoding="async"
+                alt="Retail" /></div>
+          </div>
+        </div>
+        <!-- auto -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <path d="M5 17H3a2 2 0 01-2-2v-4a2 2 0 012-2h14l4 4v2a2 2 0 01-2 2h-2" />
+                  <circle cx="7" cy="17" r="2" />
+                  <circle cx="17" cy="17" r="2" />
+                  <path d="M5 9V5a2 2 0 012-2h6l4 4" />
+                </svg></span>AUTOMOTIVE AND SPARE PARTS</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync supports organizations across the automobile and spare parts sector as they digitally
+                transform complex, fast-moving operations spanning sales, service, logistics, and supply chains.</p>
+              <p>As dealerships, service networks, and parts distributors adopt cloud-based ERP, inventory management,
+                connected diagnostics, and e-commerce platforms, we help strengthen cybersecurity to protect customer
+                data, vehicle systems, and transactional environments.</p>
+              <p>Our cloud computing services enable real-time visibility across inventory, workshops, and suppliers
+                while improving scalability and operational resilience. By leveraging AI and automation, QuantumSync
+                helps optimize demand forecasting, inventory turnover, service scheduling, predictive maintenance, and
+                cost efficiency, empowering automotive businesses to deliver faster service, reduce downtime, and create
+                more connected, customer-centric experiences.</p>
+            </div>
+            <div class="acc-img"><img src="images/automotive.jpg" loading="lazy" decoding="async"
+                alt="Automotive and Spare Parts" /></div>
+          </div>
+        </div>
+        <!-- legal -->
+        <div class="acc-item">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <span class="acc-name"><span class="acc-icon"><svg viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg></span>LEGAL</span>
+            <div class="acc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-text">
+              <p>QuantumSync partners with legal organizations to securely modernize their operations in a profession
+                built on confidentiality, trust, and compliance. As law firms and legal service providers increasingly
+                adopt cloud-based practice management systems, document management platforms, and remote collaboration
+                tools, we help strengthen cybersecurity to protect sensitive client data, intellectual property, and
+                case information from evolving threats.</p>
+              <p>Our AWS cloud computing services enable secure access, scalability, and resilience while supporting
+                flexible work models and regulatory obligations.</p>
+              <p>By leveraging AI and automation, QuantumSync helps legal teams streamline document review, contract
+                analysis, e-discovery, and administrative workflows, improving efficiency, reducing risk, and allowing
+                legal professionals to focus on higher-value, client-centric work.</p>
+            </div>
+            <div class="acc-img"><img src="images/legal.jpg" loading="lazy" decoding="async"
+                alt="Legal" /></div>
+          </div>
+        </div>
+        <!-- ind cta -->
+        <div class="acc-item" style="border-bottom:none">
+          <div
+            style="padding:1.4rem;background:var(--op);border-radius:16px;border:1px solid var(--bdo);display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin-top:.5rem">
+            <div>
+              <div
+                style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--o);margin-bottom:.25rem">
+                Your industry?</div>
+              <p style="font-size:.85rem;color:var(--mu);margin:0">Let us talk about your challenges.</p>
+            </div>
+            <a href="#contact"
+              style="font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--o);text-decoration:none;border-bottom:1px solid var(--o);white-space:nowrap">Get
+              in touch →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- cta -->
+  <section id="ctab">
+    <div class="blob cb1"></div>
+    <div class="blob cb2"></div>
+    <div class="sw rv" style="position:relative">
+      <p class="ctab-lbl">Ready to transform?</p>
+      <h2 class="ctab-tit" style="color:#fff">Let us shape your digital future</h2>
+      <p class="ctab-sub" style="color:#ffffff">Whether you are strengthening cybersecurity, migrating to the cloud, or
+        unlocking AI, we are
+        here for every step of your journey.</p>
+      <a href="#contact" class="bto">Start a Conversation →</a>
+    </div>
+  </section>
+  <!-- partners -->
+  <section id="partners">
+    <div class="sw">
+      <p class="plbl rv">Our Partners</p>
+      <div class="pr rv">
+        <span class="pn aug"><img src="images/august.png" loading="lazy" decoding="async" alt="August" /></span>
+        <span class="pn aws" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});setTimeout(function(){document.getElementById('modal-cloud').classList.add('open');document.body.style.overflow='hidden';},600);" style="cursor:pointer;" title="Cloud Computing"><img src="images/aws.svg" loading="lazy" decoding="async" alt="AWS" /></span>
+        <span class="pn ingram"><img src="images/ingram-micro.png" loading="lazy" decoding="async"
+            alt="Ingram Micro" /></span>
+        <span class="pn sf"><img src="images/salesforce.png" loading="lazy" decoding="async" alt="Salesforce" /></span>
+        <span class="pn sisa"><img src="images/sisa.png" loading="lazy" decoding="async" alt="SISA" /></span>
+        <span class="pn ms"><img
+            src="images/microsoft.svg" loading="lazy" decoding="async"
+            alt="Microsoft" /></span>
+      </div>
+    </div>
+  </section>
+  <!-- contact -->
+  <section id="contact">
+    <div class="sw">
+      <p class="slbl rv">Contact</p>
+      <h2 class="stit rv">Get in <em>touch</em></h2>
+      <div class="cog">
+        <div class="rvl">
+          <p>The best solutions begin with a conversation. Tell us about your goals, challenges, or big ideas, and let
+            us explore how we can build secure, intelligent, and scalable solutions together.</p>
+          <div style="margin-top:2rem">
+            <div class="cdet">
+              <div class="cdi">📞</div>
+              <div>
+                <div class="cds">Phone</div>
+                <div class="cdv">1300 202 157</div>
+              </div>
+            </div>
+            <div class="cdet">
+              <div class="cdi">✉</div>
+              <div>
+                <div class="cds">Email</div>
+                <div class="cdv">connect@quantumsync.com.au</div>
+              </div>
+            </div>
+          </div>
+          <div class="offs">
+            <div class="og">
+              <h5>Australia</h5>
+              <p>Ballarat<br />Melbourne <br />Geelong</p>
+            </div>
+            <div class="og">
+              <h5>India</h5>
+              <p>Bengaluru</p>
+            </div>
+          </div>
+        </div>
+        <div class="rvr">
+          <form class="cf" id="contactForm">
+            <input type="hidden" name="_subject" value="New Enquiry: QuantumSync Website" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <div class="fr">
+              <div class="fg"><label>Name</label><input type="text" name="name" id="fname" placeholder="Your name"
+                  required />
+              </div>
+              <div class="fg"><label>Email</label><input type="email" name="email" id="femail"
+                  placeholder="your@email.com" required /></div>
+            </div>
+            <div class="fg"><label>Organization</label><input type="text" name="organisation" id="forg"
+                placeholder="Company name" /></div>
+            <div class="fg"><label>How can we help?</label><textarea name="message" id="fmsg"
+                placeholder="Tell us about your goals, challenges, or ideas…" required></textarea></div>
+            <button type="submit" class="fb" id="fsubmit">Send Message →</button>
+            <div id="fok"
+              style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:rgba(255,92,0,0.1);border:1px solid rgba(255,92,0,0.3);border-radius:10px;color:var(--o);font-size:.9rem;font-weight:500;">
+              ✓ Message sent! We'll be in touch with you shortly.
+            </div>
+            <div id="ferr"
+              style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:rgba(255,80,80,0.1);border:1px solid rgba(255,80,80,0.3);border-radius:10px;color:#ff6b6b;font-size:.9rem;font-weight:500;">
+              ✗ Something went wrong. Please email us at connect@quantumsync.com.au
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="ft">
+      <div class="ft-top">
+        <div class="ft-brand-col">
+          <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="ft-brand">
+            <span style="color:#FF5C00;display:inline-flex;align-items:center;gap:0;line-height:1;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-.03em;">
+              <svg width="16" height="21" viewBox="0 0 160 210" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;margin-right:-1px;margin-bottom:-1px;">
+                <circle cx="80" cy="85" r="66" stroke="#FF5C00" stroke-width="26" fill="none"/>
+                <line x1="80" y1="148" x2="80" y2="178" stroke="#FF5C00" stroke-width="26" stroke-linecap="round"/>
+              </svg><span style="color:#FF5C00;padding-left:3px;">uantumSync</span>
+            </span>
+          </a>
+          <p class="ft-tagline">Syncing Technology With Tomorrow. Cybersecurity, cloud, AI, and managed services for
+            Australia and beyond.</p>
+          <div class="ft-social">
+            <a href="https://www.linkedin.com/company/quantumsync-pty-ltd/" target="_blank" rel="noopener"
+              class="ft-soc" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="ft-soc" aria-label="Twitter / X">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61587458014511" target="_blank" rel="noopener" class="ft-soc" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="ft-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Cybersecurity</a></li>
+            <li><a href="#services">Cloud Computing</a></li>
+            <li><a href="#services">Artificial Intelligence</a></li>
+            <li><a href="#services">Managed Services</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#contact">Careers</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#contact">Blog</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h5>Get in Touch</h5>
+          <div class="ft-contact-item">
+            <span class="icon">📞</span>
+            <div>
+              <div class="label">Phone</div>
+              <div class="val"><a href="tel:1300202157">1300 202 157</a></div>
+            </div>
+          </div>
+          <div class="ft-contact-item">
+            <span class="icon">✉</span>
+            <div>
+              <div class="label">Email</div>
+              <div class="val"><a href="mailto:connect@quantumsync.com.au">connect@quantumsync.com.au</a></div>
+            </div>
+          </div>
+          <div class="ft-contact-item">
+            <span class="icon">📍</span>
+            <div>
+              <div class="label">Offices</div>
+              <div class="val">Ballarat, Melbourne &amp; Geelong AU<br />Bengaluru, IN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <div class="ft-ack-wrap">
+          <img class="ft-ack-img" src="images/acknowledgement.jpg" loading="lazy" decoding="async"
+            alt="Acknowledgement of Country" />
+          <p class="ft-ack">QuantumSync acknowledges the Traditional Owners and Custodians of the land on which we
+            conduct business today, and pay our respects to their Elders past, present, and emerging.</p>
+        </div>
+        <span class="ft-copy">© 2026 QuantumSync Pty Ltd · All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
