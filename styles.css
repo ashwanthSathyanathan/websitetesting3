@@ -3336,24 +3336,34 @@
         will-change: auto !important;
     }
 
-    /* Kill the heavy decorative animations and filters.
-       The blobs stay visible (radial-gradient = soft glow on its own),
-       they just don't float and don't blur. Same design, no motion. */
+    /* Completely remove the decorative blob layers on mobile.
+       They're purely decorative background glows. On mobile they cost
+       memory (each is its own absolutely-positioned element with
+       gradient) for almost zero visual gain. Page section backgrounds
+       still have their dark base color. */
     .blob,
     .b1, .b2, .b3,
     .cb1, .cb2 {
-        filter: none !important;
-        -webkit-filter: none !important;
-        animation: none !important;
-        transform: none !important;
+        display: none !important;
     }
 
-    /* Shrink the blobs so they fit a phone */
-    .b1 { width: 340px !important; height: 340px !important; }
-    .b2 { width: 260px !important; height: 260px !important; }
-    .b3 { width: 240px !important; height: 240px !important; }
-    .cb1 { width: 280px !important; height: 280px !important; }
-    .cb2 { width: 200px !important; height: 200px !important; }
+    /* Tell iOS to skip rendering hidden modals entirely.
+       11 modals (4 service + 7 team) sit in the DOM. Even when
+       display:none, iOS may still allocate render resources for them.
+       content-visibility:hidden is a hard signal: "don't render this". */
+    .modal-bg:not(.open),
+    .tm-bg:not(.open) {
+        content-visibility: hidden !important;
+        contain: strict !important;
+    }
+
+    /* Scope the paint/layout cost of repeated heavy items */
+    .acc-item,
+    .sc,
+    .tm-card,
+    .modal {
+        contain: layout style paint;
+    }
 
     /* Replace nav frosted glass with solid color (looks ~identical) */
     nav {
